@@ -10,20 +10,31 @@ class Slider extends Component {
  
   render() {
 
-    const { id,altName,nasaPicture,next,last}=this.props;
+    const { id,altName,nasaPicture,next,last,StartSlideShow,StopSlideShow}=this.props;
     
 
     return (
-      <div>
+      <section>
         <h1>{id}</h1>
         <div>
           <img className="slidePicter" src={nasaPicture}  alt={altName}/>
+          <div>
           <button onClick={last}> last </button>
           <button onClick={next}> next </button>
+          </div>
+         
+          <div>
+          <button onClick={StartSlideShow}> Start Slide Show </button>
+          <button onClick={StopSlideShow}> Stop Slide Show </button>
+          </div>
+         
+
         </div>
-      </div>
+      </section>
     );
   }
 }
-
+/* Slider.propTypes={
+  id:num
+} */
 export default Slider;
